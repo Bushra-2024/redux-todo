@@ -5,7 +5,7 @@ import { useState } from 'react'
 export default function App() {
 	const data = useSelector(store => store.todolist.data)
 	const dispatch = useDispatch()
-	
+
 	const [addTitle, setAddTitle] = useState('')
 	const [addDescription, setAddDescription] = useState('')
 	const [addStatus, setAddStatus] = useState(false)
@@ -91,7 +91,7 @@ export default function App() {
 				{data.map(todo => (
 					<div
 						key={todo.id}
-						className='flex justify-between items-center p-4 bg-gray-200 rounded-lg'
+						className='flex justify-between items-center p-4 rounded-lg'
 					>
 						<div>
 							<p className='text-lg font-semibold'>{todo.title }</p>
